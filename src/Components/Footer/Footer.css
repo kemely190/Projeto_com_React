@@ -1,0 +1,12 @@
+.footer {
+  /* footer padrão: fundo roxo */
+  background-color: var(--color-footer); /* #3f1e4b */
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.copyright {
+    font-size: 0.75rem;
+}

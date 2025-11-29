@@ -1,0 +1,116 @@
+.main-content-section {
+  --header-height: 72px; 
+  --wave-height: 104px; 
+
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px 0; 
+  height: calc(100vh - var(--header-height) - var(--wave-height));
+  justify-content: center;
+  overflow: visible; 
+}
+
+.hero-container {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.hero-illustration {
+    margin-bottom: 50px;
+    height: 300px; 
+    width: 100%;
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  font-weight: 400; 
+  color: var(--color-secondary); 
+  margin-bottom: 0.8rem;
+}
+
+.highlight-pink {
+  color: var(--color-highlight); 
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.highlight-purple {
+    color: #3F3D56; 
+    font-weight: bold;
+}
+
+.hero-body {
+    margin-bottom: 3rem;
+    padding: 0 20px;
+}
+
+.body-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.main-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 2rem; 
+}
+
+.nav-link-item {
+  text-decoration: none;
+  color: #3F3D56;
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link-item:hover {
+    color: var(--color-highlight);
+}
+
+.bottom-wave-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--wave-height); 
+  z-index: 0;
+  pointer-events: none; 
+}
+
+.hero-container { position: relative; z-index: 1; }
+.bottom-wave-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateY(1px);
+  display: block;
+  object-fit: cover;
+}
+
+
+@media (max-height: 760px) {
+  .hero-illustration { height: 240px; margin-bottom: 36px; }
+  .hero-title { font-size: 1.6rem; }
+  .hero-subtitle { font-size: 0.9rem; }
+  .hero-body { margin-bottom: 2rem; }
+}
+
+@media (max-height: 680px) {
+  .hero-illustration { height: 200px; margin-bottom: 28px; }
+  .hero-title { font-size: 1.45rem; }
+  .hero-subtitle { font-size: 0.85rem; }
+  .main-nav-links { gap: 20px; }
+}
